@@ -7,6 +7,8 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.io.FileHandler;
@@ -15,53 +17,55 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
 import io.cucumber.java.After;
+import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 import io.cucumber.java.en.*;
+import qa.TestBase.TestBase;
 import qa.pageLayer.LoginPage;
 
 
-public class CheckTrackLoginDef {
+public class CheckTrackLoginDef extends TestBase{
 	
-	public static AndroidDriver driver;
-	public String appiumServer="127.0.0.1";
-	public int appiumPort=4723;
-	URL appiumURl=null;
-	public LoginPage login;
-
+	//public static AndroidDriver driver;
+//	public String appiumServer="127.0.0.1";
+//	public int appiumPort=4723;
+//	URL appiumURl=null;
+	//public LoginPage login;
+	 Logger logger;
 	
-	public AndroidDriver initializerDriver() {
-
-		DesiredCapabilities cap= new DesiredCapabilities();
-		cap.setCapability(MobileCapabilityType.DEVICE_NAME,"Android12");
-//		cap.setCapability(MobileCapabilityType.APP,"C:\\Users\\agsat\\OneDrive\\Desktop\\employee-app\\build\\app\\outputs\\flutter-apk\\app-release.apk");
-		cap.setCapability(MobileCapabilityType.APP,"C:\\AkashWorkspace\\SetupFiles\\Project App\\app-release (1).apk");//pikar click
-		cap.setCapability("platformVersion", "12");
-//		cap.setCapability("udid", "93JAY0BLTW");//for pixel 3a
-//		cap.setCapability("udid", "8AMX0VP5S");//for pixel 3
-//		cap.setCapability("udid", "emulator-5554");//for pixel 3
-		cap.setCapability("automationName","UiAutomator2");
-		cap.setCapability("unicodeKeyboard", "true");
-		
-		cap.setCapability("resetKeyboard", "true");
-		cap.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT,60);
-		
-		//			WebDriverWait wait = new WebDriverWait(driver,30);
-		//			cap.setCapability("appPackage","com.greycell.dashcamuserapp");
-		//			cap.setCapability("appActivity","com.greycell.dashcamuserapp.MainActivity");
-		//			
-		try {
-			appiumURl=new URL("http://"+appiumServer+":"+appiumPort+"/wd/hub");
-			this.driver=new AndroidDriver(appiumURl,cap);
-			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		}
-
-		catch(Exception e) {
-			e.printStackTrace();
-		}
-
-		return driver;
-	
-	}
+//	public AndroidDriver initializerDriver() {
+//
+//		DesiredCapabilities cap= new DesiredCapabilities();
+//		cap.setCapability(MobileCapabilityType.DEVICE_NAME,"Android12");
+////		cap.setCapability(MobileCapabilityType.APP,"C:\\Users\\agsat\\OneDrive\\Desktop\\employee-app\\build\\app\\outputs\\flutter-apk\\app-release.apk");
+//		cap.setCapability(MobileCapabilityType.APP,"C:\\AkashWorkspace\\SetupFiles\\Project App\\app-release (1).apk");//pikar click
+//		cap.setCapability("platformVersion", "12");
+////		cap.setCapability("udid", "93JAY0BLTW");//for pixel 3a
+////		cap.setCapability("udid", "8AMX0VP5S");//for pixel 3
+////		cap.setCapability("udid", "emulator-5554");//for pixel 3
+//		cap.setCapability("automationName","UiAutomator2");
+//		cap.setCapability("unicodeKeyboard", "true");
+//		
+//		cap.setCapability("resetKeyboard", "true");
+//		cap.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT,60);
+//		
+//		//			WebDriverWait wait = new WebDriverWait(driver,30);
+//		//			cap.setCapability("appPackage","com.greycell.dashcamuserapp");
+//		//			cap.setCapability("appActivity","com.greycell.dashcamuserapp.MainActivity");
+//		//			
+//		try {
+//			appiumURl=new URL("http://"+appiumServer+":"+appiumPort+"/wd/hub");
+//			this.driver=new AndroidDriver(appiumURl,cap);
+//			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+//		}
+//
+//		catch(Exception e) {
+//			e.printStackTrace();
+//		}
+//
+//		return driver;
+//	
+//	}
 
 
     @After
@@ -75,7 +79,7 @@ public class CheckTrackLoginDef {
         	 
         	TakesScreenshot ts=(TakesScreenshot) driver;
         	 File src = ts.getScreenshotAs(OutputType.FILE);
-        	String path ="C:\\AkashWorkspace\\WorkSpaceEclips\\CucumberAuto\\ScreenShot\\"+scenario.getName()+System.currentTimeMillis()+".png";
+        	String path ="C:\\Users\\agsat\\git\\CucumberAuto\\CucumberAuto\\ScreenShot\\"+scenario.getName()+System.currentTimeMillis()+".png";
         	File des =new File(path);
         	FileHandler.copy(src, des);
         	
@@ -83,38 +87,82 @@ public class CheckTrackLoginDef {
         
        driver.quit();
     }
-
-	@Given("launch appium")
-	public void launch_appium() {
-		
-		driver =initializerDriver();
-		login=new LoginPage(driver);
-	}
-
-	@Given("open application")
+	 
+    @Before
 	public void open_application() {
-	   
+//		    driver =initializerDriver();
+    	    intialize();
+			logger= LogManager.getLogger(this.getClass());
+			//login=new LoginPage(driver);
+	}
+    
+	@Given("Application launch appium")
+	public void launch_appium() {
+		logger.info("Application Launch");
+		
 	}
 
 	@When("enter username as {string} and password as {string}")
 	public void enter_username_as_and_password_as(String string, String string2) {
-	   login.enter_email(string);
-	   login.enter_password(string2);
+		logger.info("Enter username");
+		login.enter_email(string);
+	    logger.info("Enter password ");
+	    login.enter_password(string2);
+	   
 	}
 
 	@Then("click on ligin button")
 	public void click_on_ligin_button() {
-	    login.click_on_login_btn();
+		 logger.info("Clicked on Login ");
+	     login.click_on_login_btn();
 	}
 
 	@And("varify login succefull")
 	public void varify_login_succefull() {
 		
 		String Actualresult = login.loginSuccessFullmassage();
-		String expexted ="Login Successfu";
+		String expexted ="Login Successful";
 		System.out.println(Actualresult);
 		assertEquals(Actualresult , expexted);
+		 logger.info("Login Successful");
+	}
+	
+	
+	@Then("varify login not succefull and Error massage should display")
+	public void varify_login_not_succefull_and_error_massage_should_display() {
+		String Actualresult =	login.badCredentials();
+		System.out.println(Actualresult);
+		String expexted1 = "Bad credentials!";
+		assertEquals(Actualresult , expexted1);
+		
 		
 	}
+	@Then("varify login not succefull and Error massage should display For both username and password")
+	public void varify_login_not_succefull_and_error_massage_should_display_for_both_username_and_password() {
+		String Actualresult =login.ErroremailId();
+		String expexted = "Please enter a valid email Address";
+		System.out.println(Actualresult);
+		assertEquals(Actualresult, expexted);
 
+		String expexted1 = "Password cannot be blank";	
+		String Actualresult1 = login.Errorepass();
+		System.out.println(Actualresult1);
+		assertEquals(Actualresult1 , expexted1);
+	}
+	
+	@Then("varify login not succefull and Error massage should display For username")
+	public void varify_login_not_succefull_and_error_massage_should_display_for_username() {
+		String Actualresult =login.ErroremailId();
+		String expexted = "Please enter a valid email Address";
+		System.out.println(Actualresult);
+		assertEquals(Actualresult , expexted);
+	}
+	
+	@Then("varify login not succefull and Error massage should display For password")
+	public void varify_login_not_succefull_and_error_massage_should_display_for_password() {
+		String expexted1 = "Password cannot be blank";	
+		String Actualresult1 = login.Errorepass();
+		System.out.println(Actualresult1);
+		assertEquals(Actualresult1 , expexted1);
+	}
 }

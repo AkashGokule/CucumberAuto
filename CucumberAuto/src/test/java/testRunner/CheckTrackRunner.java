@@ -10,11 +10,11 @@ import io.cucumber.testng.CucumberOptions;
 		monochrome=true,
 		
 		//for log information in console at time of  automation
-		//dryRun = true,
+	    //dryRun = true,
 		
 		//feature file path
-		features= {".//FeatureFile/CheckTrackLogin.feature"},
-		
+		features=// {".//FeatureFile/CheckTrackLogin.feature"},
+				 {".//FeatureFile/ProjectAndTask.feature"},
 		
 		//other folder step defination store then
 		glue= {"stepDefination"},
@@ -27,6 +27,8 @@ import io.cucumber.testng.CucumberOptions;
 				  //"json:target/cucumber-report.json",
 //				 "html:test-output",
 		}
+		
+		
 		
 		)
 public class CheckTrackRunner extends AbstractTestNGCucumberTests{

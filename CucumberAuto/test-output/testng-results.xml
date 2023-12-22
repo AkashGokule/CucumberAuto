@@ -1,21 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-12-21T16:26:01 IST" name="Default suite" finished-at="2023-12-21T16:26:22 IST" duration-ms="20183">
+  <suite started-at="2023-12-22T21:03:23 IST" name="Default suite" finished-at="2023-12-22T21:03:49 IST" duration-ms="26596">
     <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.CheckTrackRunner@20d525]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
     </groups>
-    <test started-at="2023-12-21T16:26:01 IST" name="Default test" finished-at="2023-12-21T16:26:22 IST" duration-ms="20183">
-      <class name="qa.Testlayer.LoginPageTest">
-        <test-method is-config="true" signature="intialize()[pri:0, instance:qa.Testlayer.LoginPageTest@3af9c5b7]" started-at="2023-12-21T16:26:02 IST" name="intialize" finished-at="2023-12-21T16:26:16 IST" duration-ms="14588" status="PASS">
+    <test started-at="2023-12-22T21:03:23 IST" name="Default test" finished-at="2023-12-22T21:03:49 IST" duration-ms="26596">
+      <class name="testRunner.CheckTrackRunner">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:testRunner.CheckTrackRunner@20d525]" started-at="2023-12-22T21:03:23 IST" name="setUpClass" finished-at="2023-12-22T21:03:23 IST" duration-ms="889" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@29d405e6]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- intialize -->
-        <test-method signature="loginPageTest_WithvalidCredential()[pri:1, instance:qa.Testlayer.LoginPageTest@3af9c5b7]" started-at="2023-12-21T16:26:16 IST" name="loginPageTest_WithvalidCredential" finished-at="2023-12-21T16:26:22 IST" duration-ms="5559" status="PASS">
+        </test-method> <!-- setUpClass -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.CheckTrackRunner@20d525]" started-at="2023-12-22T21:03:24 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-12-22T21:03:49 IST" duration-ms="25619" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify add project successfull"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Verify the project and Task Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Project name is empty] but found [Project name is empty!]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Project name is empty] but found [Project name is empty!]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at org.testng.Assert.assertEquals(Assert.java:666)
+at stepDefination.ProjectAndTaskDef.verify_the_error_massage_as(ProjectAndTaskDef.java:72)
+at ✽.verify the error massage as "Project name is empty"(file:///C:/Users/agsat/git/CucumberAuto/CucumberAuto/./FeatureFile/ProjectAndTask.feature:15)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginPageTest_WithvalidCredential -->
-      </class> <!-- qa.Testlayer.LoginPageTest -->
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:testRunner.CheckTrackRunner@20d525]" started-at="2023-12-22T21:03:49 IST" name="tearDownClass" finished-at="2023-12-22T21:03:49 IST" duration-ms="36" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- testRunner.CheckTrackRunner -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

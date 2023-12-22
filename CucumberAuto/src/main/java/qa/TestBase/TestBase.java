@@ -1,9 +1,14 @@
 package qa.TestBase;
 
+import java.io.File;
+import java.io.IOException;
 import java.net.URL;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.io.FileHandler;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
@@ -12,6 +17,7 @@ import org.testng.annotations.BeforeSuite;
 
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
+import io.cucumber.java.Scenario;
 import qa.My_Details.Request_My_Leaves;
 import qa.My_Details.TeamMembersProfile;
 import qa.My_Timesheet.Timesheet;
@@ -49,32 +55,32 @@ public class TestBase {
 	public int appiumPort=4723;
 	URL appiumURl=null;
 	public static Properties prop;
-	public LoginPage login;
-	public DashBoardPage dbpage;
-	public Add_WorkSchedule addworkSchedule;
-	public Edit_WorkSchedule editWorkSchedule;
-	public Add_Project addproject;
-	public Add_Task addtask;
-	public Edit_Project editproject;
-	public Edit_Task edittask;
-	public Reports report;
-	public Add_TimeEntry addtimeentry;
-	public TimePickerWeel timepickerweel;
-	public TimePickerWheelEdit timepickerwheeledit;
-	public Timesheet timesheet;
-	public Add_TeamMembers add_teammembers;
-	public Associated_WorkSchedule associated_workschedule;
-	public Role_Assignment role_assignment;
-	public Edit_Associated_WorkScheduleAdd edit_associated_workschedule;
-	public Edit_Role_Assignment edit_role_assignment;
-	public Edit_TeamMembers edit_teammembers;
-	public Leaves leaves;
-	public Timesheet_Approval timesheet_approval;
-	public Request_My_Leaves request_my_leaves;
-	public Add_Leave_types add_leave_types;
-	public Edit_Leave_types edit_leave_types;
-	public Modify_leaveBalance modify_leavebalance;
-    public TeamMembersProfile teammembersprofile;
+	public static LoginPage login;
+	public static DashBoardPage dbpage;
+	public static Add_WorkSchedule addworkSchedule;
+	public static Edit_WorkSchedule editWorkSchedule;
+	public static Add_Project addproject;
+	public static Add_Task addtask;
+	public static Edit_Project editproject;
+	public static Edit_Task edittask;
+	public static Reports report;
+	public static Add_TimeEntry addtimeentry;
+	public static TimePickerWeel timepickerweel;
+	public static TimePickerWheelEdit timepickerwheeledit;
+	public static Timesheet timesheet;
+	public static Add_TeamMembers add_teammembers;
+	public static Associated_WorkSchedule associated_workschedule;
+	public static Role_Assignment role_assignment;
+	public static Edit_Associated_WorkScheduleAdd edit_associated_workschedule;
+	public static Edit_Role_Assignment edit_role_assignment;
+	public static Edit_TeamMembers edit_teammembers;
+	public static Leaves leaves;
+	public static Timesheet_Approval timesheet_approval;
+	public static Request_My_Leaves request_my_leaves;
+	public static Add_Leave_types add_leave_types;
+	public static Edit_Leave_types edit_leave_types;
+	public static Modify_leaveBalance modify_leavebalance;
+    public static TeamMembersProfile teammembersprofile;
 
 	public TestBase() {
 		//		try {
@@ -123,11 +129,11 @@ public class TestBase {
 
 	}
        //@BeforeSuite
-	  @BeforeClass
+	 // @BeforeClass
 	//	@BeforeMethod
-	public void intialize() {
-		  
-		driver= initializerDriver();
+	public static  void intialize() {
+		TestBase testBase =new TestBase();
+		driver= testBase.initializerDriver();
 
 		login=new LoginPage(driver);
 		dbpage=new DashBoardPage(driver);
@@ -156,7 +162,17 @@ public class TestBase {
 		timepickerwheeledit =new TimePickerWheelEdit(driver);
 		teammembersprofile =new TeamMembersProfile(driver);
 	}
-
+	 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	//		@BeforeMethod
 	//		public void Logins() {		
 	//			login.enter_email("akashgokule12345@mailinator.com");

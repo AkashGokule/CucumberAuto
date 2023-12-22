@@ -5,6 +5,7 @@
 
 <classes>
 	<class name="testRunner.CheckTrackRunner"></class>
+	
 </classes>	
 	
 </test>	
