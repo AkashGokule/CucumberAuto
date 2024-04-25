@@ -15,11 +15,11 @@ import org.openqa.selenium.WebElement;
 //		private WebElement view_Project;
 //		@FindBy(xpath="//android.view.View[@content-desc=\"DemoTask\"]/android.widget.ImageView[3]")
 //		private WebElement edit_Task;
-		@FindBy(xpath="/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.EditText[1]")
+		@FindBy(xpath="/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.EditText[1]")
 		private WebElement name;
-		@FindBy(xpath="/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.EditText[2]")
+		@FindBy(xpath="/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.EditText[2]")
 		private WebElement deScription;
-		@FindBy(xpath="/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View[4]")
+		@FindBy(xpath="/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View[5]")
 		private WebElement status;
 		@FindBy(xpath="//android.widget.Button[@content-desc=\"CANCEL\"]")
 		private WebElement cancle;
@@ -56,7 +56,7 @@ import org.openqa.selenium.WebElement;
 	
 		}
 		
-		public void enter_TaskName(String name1) {
+		public void enter_TaskName(String name1)  {
 			Actions a =new Actions(driver);
 
 			a.moveToElement(name).click().perform();

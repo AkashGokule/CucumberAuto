@@ -54,6 +54,18 @@ Feature: Verify the login Functionality
     
     
     
+#    Scenario: Login Page Validations
+#     Given User is on login page   
+#     Then with following credentials following behaviour is observed  
+#     user name 		| password 		| login outcome | error at level | error message 										| 
+#     validUN   		| validPw  		| success       |                |               										|
+#     inValidUN   	| NA  				| failure       | formLeve       | Invalid Credentials              |
+#     validUN   		| inValidPw  	| failure       | formLevel      | Invalid Credentials              |
+#      ""  	     		| validPw  		| failure       | fieldLevel     | Invalid Credentials              |
+             
+    
+    
+    
     
     
     

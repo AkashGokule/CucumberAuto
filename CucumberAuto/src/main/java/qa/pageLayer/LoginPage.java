@@ -1,5 +1,6 @@
 package qa.pageLayer;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
@@ -8,11 +9,11 @@ import org.openqa.selenium.support.PageFactory;
 import io.appium.java_client.android.AndroidDriver;
 
 public class LoginPage {
-
-	@FindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.ImageView[2]")
+                     
+	@FindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.ImageView[2]")
 	private WebElement email;
-
-	@FindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText")
+                     
+	@FindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText")
 	private WebElement passWord;
 
 	@FindBy(xpath = "//android.widget.Button[@content-desc=\"LOGIN\"]")
@@ -27,7 +28,7 @@ public class LoginPage {
 	@FindBy(xpath = "//android.view.View[@content-desc=\"Login Successful\"]")
 	private WebElement loginSuccessFullmassage;
 	
-
+	//a[text()='PYTHON']
 	@FindBy(xpath = "//android.view.View[@content-desc=\"Password cannot be blank\"]")
 	private WebElement Errorepass;
 	
@@ -82,6 +83,9 @@ public class LoginPage {
 	public String Errorepass() {
 
 		String acutalResult = 	Errorepass.getAttribute("content-desc");
+		
+		System.out.println("Error Password Function : get attribute : " + Errorepass.getAttribute("content-desc") + "abc");
+		System.out.println("Error Password Function : " + acutalResult);
 		return acutalResult;
 	}
 	public String badCredentials() {
@@ -97,4 +101,11 @@ public class LoginPage {
 		return acutalResult;
 	}
 
+	public String allMessage(String contentdec) {
+		WebElement element = driver.findElement(By.xpath("//android.view.View[@content-desc='"+contentdec+"']"));
+		String acutalResult = element.getAttribute("content-desc");
+		
+		System.out.println("Login Page : all message method : " + acutalResult);
+		return acutalResult;
+	}
 }

@@ -4,6 +4,7 @@ package qa.Testlayer;
 
 
 
+import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
 import qa.TestBase.TestBase;
@@ -23,16 +24,19 @@ public class TimeEntryTest extends TestBase{
         addtask.clickOn_view_Project("DemoProject");
         addtimeentry.clickOn_view_task();
         addtimeentry.clickOn_add_button();
-        Calendors.calendorForTimeSheet("14/10/2023","14, Saturday, October 14, 2023");
+        Calendors.calendorForTimeSheet("14/10/2024","14, Monday, October 14, 2024");
+        driver.findElement(By.xpath("(//android.view.View[@content-desc=\"04\"])[1]")).click();
+        driver.findElement(By.xpath("//android.view.View[@content-desc=\"46\"]")).click();
+        driver.findElement(By.xpath("(//android.view.View[@content-desc=\"AM\"])[1]")).click();
         Thread.sleep(3000);
-        timepickerweel.clickOn_from_Hourse("12");
-        timepickerweel.clickOn_from_minute("25");
-        timepickerweel.clickOn_from_Am_pm("AM");
-        Thread.sleep(1000);
-        timepickerweel.clickOn_to_Hourse("12");
-        timepickerweel.clickOn_to_minute("25");
-        timepickerweel.clickOn_to_Am_pm("PM");
-        addtimeentry.clickOn_Save();
+//        timepickerweel.clickOn_from_Hourse("06");
+//        timepickerweel.clickOn_from_minute("40");
+//        timepickerweel.clickOn_from_Am_pm("AM");
+//        Thread.sleep(1000);
+//        timepickerweel.clickOn_to_Hourse("06");
+//        timepickerweel.clickOn_to_minute("40");
+//        timepickerweel.clickOn_to_Am_pm("PM");
+//        addtimeentry.clickOn_Save();
      
     
 	}

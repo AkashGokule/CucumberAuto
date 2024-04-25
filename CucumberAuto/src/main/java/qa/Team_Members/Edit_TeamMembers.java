@@ -50,7 +50,7 @@ public class Edit_TeamMembers {
 	{
 		PageFactory.initElements(driver, this);
 
-		this.driver = driver;
+		//this.driver = driver;
 
 	}
 	

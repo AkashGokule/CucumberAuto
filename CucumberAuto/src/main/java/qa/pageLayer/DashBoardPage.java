@@ -32,7 +32,7 @@ public class DashBoardPage {
 	@FindBy(xpath = "//android.widget.ImageView[@content-desc=\"Reports\"]")
 	private WebElement Reports;
 	
-	@FindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.Button")
+	@FindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.Button")
 	private WebElement Main_Menu;
 	
 	@FindBy(xpath = "//android.widget.ImageView[@content-desc=\"Dashboard\"]")

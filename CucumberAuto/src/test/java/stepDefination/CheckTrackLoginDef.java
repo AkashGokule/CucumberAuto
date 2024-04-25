@@ -5,6 +5,8 @@ import static org.testng.Assert.assertEquals;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.logging.log4j.LogManager;
@@ -34,6 +36,7 @@ public class CheckTrackLoginDef extends TestBase{
 	 Logger logger;
 	
 //	public AndroidDriver initializerDriver() {
+	 
 //
 //		DesiredCapabilities cap= new DesiredCapabilities();
 //		cap.setCapability(MobileCapabilityType.DEVICE_NAME,"Android12");
@@ -94,6 +97,7 @@ public class CheckTrackLoginDef extends TestBase{
     	    intialize();
 			logger= LogManager.getLogger(this.getClass());
 			//login=new LoginPage(driver);
+			
 	}
     
 	@Given("Application launch appium")
@@ -137,6 +141,7 @@ public class CheckTrackLoginDef extends TestBase{
 		
 		
 	}
+	
 	@Then("varify login not succefull and Error massage should display For both username and password")
 	public void varify_login_not_succefull_and_error_massage_should_display_for_both_username_and_password() {
 		String Actualresult =login.ErroremailId();
@@ -165,4 +170,130 @@ public class CheckTrackLoginDef extends TestBase{
 		System.out.println(Actualresult1);
 		assertEquals(Actualresult1 , expexted1);
 	}
-}
+	
+	@Then("verify login outcome {string}")
+	public void verify_login_outcome(String string) {
+		
+	    if (string.equals("Login success")) {
+	    	System.out.println(string);
+	    }
+	    
+	    if (string.equals("Login failure")) {
+	    	System.out.println(string);
+	    }
+	} 
+
+
+	@Then("verify the error message {string} and {int}")
+	public void verify_the_error_message_and(String expexted, int index) {
+//		String[] arrayOfMessages = {"Login Successful","Bad credentials!","Bad credentials!","Bad credentials!","Password cannot be blank","Please enter a valid email Address","Please enter a valid email Address","Please enter a valid email Address","Password cannot be blank"};
+//	
+//		String Actualresult = login.allMessage(arrayOfMessages[index]);
+//
+//		System.out.println(Actualresult);		
+//		assertEquals(Actualresult, expexted);
+		
+	
+			
+		
+		int selectedIndex = 0;
+		
+		String[] arrayOfMessages = {"Login Successful","Bad credentials!","Please enter a valid email Address","Password cannot be blank"};
+		
+		for(int i= 0; i<arrayOfMessages.length ; i++) {
+			
+			if(arrayOfMessages[i].equals(expexted)) {
+				
+				selectedIndex = i;
+				
+			}
+			
+		}
+		
+		System.out.print("Selected Index : " + selectedIndex);
+		
+		if(selectedIndex == 0) {
+			if(login.loginSuccessFullmassage().equals(expexted)) {
+		    	   
+	    		//print for error in loginSuccessFullmassage
+	   		System.out.println("Login Error for loginSuccessFullmassage : " + login.loginSuccessFullmassage());
+	   		System.out.println("Expected error : " + expexted);
+	   		System.out.println("Bool Condition : " + login.loginSuccessFullmassage().equals(expexted));
+	    	   
+	    	   String Actualresult = login.loginSuccessFullmassage();
+	   		   System.out.println(Actualresult);
+	   		   assertEquals(Actualresult , expexted);
+	               } 
+		}
+		
+		else if(selectedIndex == 1) {
+			
+			 if(login.badCredentials().equals(expexted)) {
+		        	
+		        	//print for error in bad credential
+		    		System.out.println("Login Error for badCredentials : " + login.badCredentials());
+		    		System.out.println("Expected error : " + expexted);
+		    		System.out.println("Bool Condition : " + login.badCredentials().equals(expexted));
+		        	
+		        	String Actualresult =	login.badCredentials();
+		    		System.out.println(Actualresult);
+		    		assertEquals(Actualresult , expexted);
+				}
+		      
+			
+		}
+		
+		else if(selectedIndex == 2) {
+         if(login.ErroremailId().equals(expexted)) {
+				
+				//print for error in mail
+				System.out.println("Login Error for mail : " + login.ErroremailId());
+				System.out.println("Expected error : " + expexted);
+				System.out.println("Bool Condition : " + login.ErroremailId().equals(expexted));
+				
+				
+				String Actualresult =login.ErroremailId();
+				System.out.println(Actualresult);
+				assertEquals(Actualresult , expexted);
+			}
+		}
+		
+		else if(selectedIndex == 3) {
+			 if (login.Errorepass().equals(expexted)) {
+				 
+					//print for error in password
+						System.out.println("Login Error for password : " + login.Errorepass());
+						System.out.println("Expected error : " + expexted);
+						System.out.println("Bool Condition : " + login.Errorepass().equals(expexted));
+					 
+						String Actualresult1 = login.Errorepass();
+						System.out.println(Actualresult1);
+						assertEquals(Actualresult1 , expexted);
+					}
+				
+			        
+			
+		}
+		
+		
+		
+		
+		
+		
+		
+	
+	}
+		
+		
+		
+		
+		
+		
+	
+	@Given("Verify the login Functionality with {string}")
+	public void verify_the_login_functionality_with(String string) {
+	   
+		
+	}
+	
+ }

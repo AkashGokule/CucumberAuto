@@ -22,6 +22,11 @@ public class ProjectTest extends TestBase {
 		addproject.enter_ProjectdeScription("demo project");
 		addproject.clickOn_Status();
 		addproject.clickOn_Add();
+		String ActualFirst = addproject.getProjectName("DemoProject");
+		String expexted ="DemoProject";
+		System.out.println(ActualFirst);
+		assertEquals(ActualFirst, expexted);
+		
 	
 	}
 	@Test
@@ -199,6 +204,7 @@ public class ProjectTest extends TestBase {
 		login.click_on_login_btn();
 		dbpage.ClickOn_MainMenu();
 		dbpage.ClickOn_Projects();
+		 
 		
 		addtask.clickOn_view_Project("DemoProject");
 		addtask.clickOn_add_Task();
@@ -389,6 +395,7 @@ public class ProjectTest extends TestBase {
 		System.out.println(ActualFirst);	
 		assertEquals(ActualFirst, expexted);
 	}
+	
 	@Test
 	public void varifyEdit_TaskWith_NumericValue() throws InterruptedException {
 		login.enter_email("akashgokule12345@mailinator.com");
@@ -409,6 +416,7 @@ public class ProjectTest extends TestBase {
 		System.out.println(ActualFirst);	
 		assertEquals(ActualFirst, expexted);
 	}
+	
 	@Test
 	public void varifyEdit_TaskWith_CapitalLatter() throws InterruptedException {
 		login.enter_email("akashgokule12345@mailinator.com");

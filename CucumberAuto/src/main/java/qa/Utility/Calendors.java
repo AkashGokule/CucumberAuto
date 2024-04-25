@@ -44,11 +44,11 @@ public class Calendors extends TestBase{
 		for (int i=0 ;i<jumpToMonth; i++) {
 
 			if (increment) {
-				driver. findElement (By. xpath("//hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View[1]/android.view.View/android.view.View/android.view.View/android.widget.ImageView[4]")).click();//forword arrow xpath
+				driver. findElement (By. xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View[1]/android.view.View/android.view.View/android.view.View/android.widget.ImageView[4]")).click();//forword arrow xpath
 			}
 			else
 			{
-				driver.findElement(By. xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View[1]/android.view.View/android.view.View/android.view.View/android.widget.ImageView[3]")).click();//backword arrow xpath
+				driver.findElement(By. xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View[1]/android.view.View/android.view.View/android.view.View/android.widget.ImageView[3]")).click();//backword arrow xpath
 			}
 			Thread.sleep(1000);
 		}

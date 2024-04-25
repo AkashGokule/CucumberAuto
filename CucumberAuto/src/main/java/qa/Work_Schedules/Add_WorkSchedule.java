@@ -18,7 +18,7 @@ public class Add_WorkSchedule {
 	@FindBy(xpath = "//android.widget.Button[@content-desc=\"ADD WORK SCHEDULE\"]")
 	private WebElement Add_WorkSchedule;
 	
-	@FindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.EditText")
+	@FindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.ScrollView/android.widget.EditText")
 	private WebElement name;
 	
 	@FindBy(xpath ="//android.widget.ImageView[@content-desc=\"0m\r\n"
@@ -46,6 +46,9 @@ public class Add_WorkSchedule {
 	
 	@FindBy(xpath="//android.view.View[@content-desc=\"Name can't be empty\"]")
 	private WebElement ErrorName;
+	
+	@FindBy(xpath="/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.ScrollView/android.widget.ImageView[1]")
+	private WebElement effectivestartdate;
 	
 	AndroidDriver driver;
 
@@ -75,7 +78,7 @@ public class Add_WorkSchedule {
 		
 	}
 	
-	public void clickOn_Hoursbox() throws InterruptedException {
+	public void clickOn_Hoursbox()  {
 		
 		Hours1.click();
 		
@@ -101,9 +104,13 @@ public class Add_WorkSchedule {
 	public void clickOn_save() {
 		save.click();
 	}
+	public void effectivestartdate() {
+		effectivestartdate.click();
+	}
 	
-	
-	
+	public void selectweekday(String contentdesc) {//Sun,Mon,Tue,Wed,Thu,Fri,Sat
+		driver.findElement(By.xpath("//android.view.View[@content-desc='"+contentdesc+"']")).click();
+	}
 	
 	
 	

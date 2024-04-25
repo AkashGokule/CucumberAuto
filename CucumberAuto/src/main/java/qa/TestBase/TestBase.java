@@ -4,8 +4,10 @@ import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.Properties;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.ContextAware;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.io.FileHandler;
@@ -111,8 +113,11 @@ public class TestBase {
 		DesiredCapabilities cap= new DesiredCapabilities();
 		cap.setCapability(MobileCapabilityType.DEVICE_NAME,"Android12");
 //		cap.setCapability(MobileCapabilityType.APP,"C:\\Users\\agsat\\OneDrive\\Desktop\\employee-app\\build\\app\\outputs\\flutter-apk\\app-release.apk");
-		cap.setCapability(MobileCapabilityType.APP,"C:\\AkashWorkspace\\SetupFiles\\Project App\\app-release (1).apk");//pikar click
+//		cap.setCapability(MobileCapabilityType.APP,"C:\\AkashWorkspace\\SetupFiles\\Project App\\app-release (1).apk");//pikar click
+		cap.setCapability(MobileCapabilityType.APP,"C:\\AkashWorkspace\\SetupFiles\\Project App\\app-release (2).apk");
 		cap.setCapability("platformVersion", "12");
+		cap.setCapability("automationName", "Flutter");
+		cap.setCapability("newCommandTimeout", 250);
 //		cap.setCapability("udid", "93JAY0BLTW");//for pixel 3a
 //		cap.setCapability("udid", "8AMX0VP5S");//for pixel 3
 //		cap.setCapability("udid", "emulator-5554");//for pixel 3
@@ -128,7 +133,7 @@ public class TestBase {
 		return cap;
 
 	}
-       //@BeforeSuite
+      //@BeforeSuite
 	 // @BeforeClass
 	//	@BeforeMethod
 	public static  void intialize() {
@@ -187,5 +192,19 @@ public class TestBase {
 //				dbpage.ClickOn_LogOut();
 //			}
 
+	public static void switchContext(String context) {
+
+		((ContextAware) driver).getContext();
+		Set<String> con = ((ContextAware) driver).getContextHandles();
+		System.out.println(con);
+		for (String c : con) {
+			if (c.contains(context)) {
+				((ContextAware) driver).context(c);
+				break;
+
+			}
+			
+		}
+	}
 }
 

@@ -1,5 +1,4 @@
 package qa.Utility;
-
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Date;
@@ -9,10 +8,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 
+
 import io.appium.java_client.android.AndroidDriver;
+import qa.TestBase.TestBase;
 
 
-public class TimePickerWeel {
+public class TimePickerWeel extends TestBase {
 	
 	String contentdesc_fh;
 	String contentdesc_fm;
@@ -28,7 +29,7 @@ public class TimePickerWeel {
 	private WebElement to_minute;
 	private WebElement to_Am_pm ;
 
-	AndroidDriver driver;
+	static AndroidDriver driver;
 	
 public TimePickerWeel (AndroidDriver driver) {
 	this.driver=driver;
@@ -194,26 +195,29 @@ public TimePickerWeel (AndroidDriver driver) {
 
 	public static String[] getCurrentTime() {
 		
-	    Date currentDate = new Date();
+//	    Date currentDate = new Date();
+//	    
+//	    SimpleDateFormat dateFormat = new SimpleDateFormat("hhmm");
+//	    String formattedDate = dateFormat.format(currentDate);
+//	 
+//	    String hours = formattedDate.substring(0, 2);
+//	    String minutes = formattedDate.substring(2, 4);
+//	    
+////	    System.out.println(formattedDate);
+////	    System.out.println(hours);
+////	    System.out.println(minutes);
 	    
-	    SimpleDateFormat dateFormat = new SimpleDateFormat("hhmm");
-	    String formattedDate = dateFormat.format(currentDate);
-	 
-	    String hours = formattedDate.substring(0, 2);
-	    String minutes = formattedDate.substring(2, 4);
-	    
-//	    System.out.println(formattedDate);
-//	    System.out.println(hours);
-//	    System.out.println(minutes);
-	    
+		 String currentTime = driver.getDeviceTime();
+	        System.out.println("Current device time: " + currentTime);
+		    String hours = currentTime.substring(11, 13);
+		    String minutes = currentTime.substring(14, 16);		    
+		    System.out.println(hours);
+		    System.out.println(minutes);
+		
+		
 	    String[] result = {hours, minutes};
 	    System.out.println(Arrays.toString(result));
 	    return result;
 	}
-
-
-
-
-
 
 }

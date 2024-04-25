@@ -57,6 +57,7 @@ public class Edit_WorkSchedule {
 	}
 	public void clickOn_Edit_WorkSchedule() {
 		edit_WorkSchedule.click();
+		//driver.findElement(By.xpath("(//android.view.View[@content-desc='"+workschedule+"'])[1]/android.widget.ImageView[2]")).click();
 	}
 	public String getWorkScheduleName (String contendesc) {
 		WebElement workSchedule = driver.findElement(By.xpath("(//android.view.View[@content-desc='"+contendesc+"'])[1]"));
