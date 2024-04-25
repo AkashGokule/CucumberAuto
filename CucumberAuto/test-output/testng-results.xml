@@ -2,15 +2,15 @@
 <testng-results ignored="0" total="9" passed="8" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-04-24T19:20:53 IST" name="Default suite" finished-at="2024-04-24T19:24:36 IST" duration-ms="222575">
+  <suite started-at="2024-04-25T17:29:28 IST" name="test Suite" finished-at="2024-04-25T17:32:35 IST" duration-ms="187157">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.CheckTrackRunner@68567e20]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2024-04-24T19:20:53 IST" name="Default test" finished-at="2024-04-24T19:24:36 IST" duration-ms="222575">
+    <test started-at="2024-04-25T17:29:28 IST" name="Regression Tests" finished-at="2024-04-25T17:32:35 IST" duration-ms="187157">
       <class name="testRunner.CheckTrackRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:testRunner.CheckTrackRunner@68567e20]" started-at="2024-04-24T19:20:54 IST" name="setUpClass" finished-at="2024-04-24T19:20:55 IST" duration-ms="1144" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:testRunner.CheckTrackRunner@68567e20]" started-at="2024-04-25T17:29:28 IST" name="setUpClass" finished-at="2024-04-25T17:29:29 IST" duration-ms="642" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -21,7 +21,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.CheckTrackRunner@68567e20]" started-at="2024-04-24T19:20:55 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-24T19:21:56 IST" duration-ms="61533" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.CheckTrackRunner@68567e20]" started-at="2024-04-25T17:29:29 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-25T17:30:14 IST" duration-ms="44732" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -41,9 +41,9 @@ For documentation on this error, please visit: https://www.selenium.dev/document
 Build info: version: '4.13.0', revision: 'ba948ece5b*'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
 Driver info: io.appium.java_client.android.AndroidDriver
-Command: [e7062f6f-cb26-4504-8b2c-1e33943f1062, findElement {using=xpath, value=//android.view.View[@content-desc="Login Successful"]}]
+Command: [47037a3d-6b75-4304-a655-56568305ab2f, findElement {using=xpath, value=//android.view.View[@content-desc="Login Successful"]}]
 Capabilities {appium:app: C:\AkashWorkspace\SetupFile..., appium:appPackage: com.example.employee_app, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {app: C:\AkashWorkspace\SetupFile..., automationName: UiAutomator2, deviceName: Android12, newCommandTimeout: 60, platformName: ANDROID, platformVersion: 12, resetKeyboard: true, unicodeKeyboard: true}, appium:deviceApiLevel: 31, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_x86_64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x1920, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:newCommandTimeout: 60, appium:pixelRatio: 2.625, appium:platformVersion: 12, appium:resetKeyboard: true, appium:statBarHeight: 63, appium:takesScreenshot: true, appium:unicodeKeyboard: true, appium:viewportRect: {height: 1731, left: 0, top: 63, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Session ID: e7062f6f-cb26-4504-8b2c-1e33943f1062]]>
+Session ID: 47037a3d-6b75-4304-a655-56568305ab2f]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
@@ -51,9 +51,9 @@ For documentation on this error, please visit: https://www.selenium.dev/document
 Build info: version: '4.13.0', revision: 'ba948ece5b*'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
 Driver info: io.appium.java_client.android.AndroidDriver
-Command: [e7062f6f-cb26-4504-8b2c-1e33943f1062, findElement {using=xpath, value=//android.view.View[@content-desc="Login Successful"]}]
+Command: [47037a3d-6b75-4304-a655-56568305ab2f, findElement {using=xpath, value=//android.view.View[@content-desc="Login Successful"]}]
 Capabilities {appium:app: C:\AkashWorkspace\SetupFile..., appium:appPackage: com.example.employee_app, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {app: C:\AkashWorkspace\SetupFile..., automationName: UiAutomator2, deviceName: Android12, newCommandTimeout: 60, platformName: ANDROID, platformVersion: 12, resetKeyboard: true, unicodeKeyboard: true}, appium:deviceApiLevel: 31, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_x86_64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x1920, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:newCommandTimeout: 60, appium:pixelRatio: 2.625, appium:platformVersion: 12, appium:resetKeyboard: true, appium:statBarHeight: 63, appium:takesScreenshot: true, appium:unicodeKeyboard: true, appium:viewportRect: {height: 1731, left: 0, top: 63, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Session ID: e7062f6f-cb26-4504-8b2c-1e33943f1062
+Session ID: 47037a3d-6b75-4304-a655-56568305ab2f
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -81,7 +81,7 @@ at ✽.verify the error message "Login Successful" and 0(file:///C:/Users/agsat/
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.CheckTrackRunner@68567e20]" started-at="2024-04-24T19:21:56 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-24T19:22:19 IST" duration-ms="22541" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.CheckTrackRunner@68567e20]" started-at="2024-04-25T17:30:14 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-25T17:30:34 IST" duration-ms="20196" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -97,7 +97,7 @@ at ✽.verify the error message "Login Successful" and 0(file:///C:/Users/agsat/
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.CheckTrackRunner@68567e20]" started-at="2024-04-24T19:22:19 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-24T19:22:43 IST" duration-ms="23862" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.CheckTrackRunner@68567e20]" started-at="2024-04-25T17:30:34 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-25T17:30:51 IST" duration-ms="17242" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -113,7 +113,7 @@ at ✽.verify the error message "Login Successful" and 0(file:///C:/Users/agsat/
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.CheckTrackRunner@68567e20]" started-at="2024-04-24T19:22:43 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-24T19:23:05 IST" duration-ms="21883" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.CheckTrackRunner@68567e20]" started-at="2024-04-25T17:30:51 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-25T17:31:10 IST" duration-ms="18985" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -129,7 +129,7 @@ at ✽.verify the error message "Login Successful" and 0(file:///C:/Users/agsat/
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.CheckTrackRunner@68567e20]" started-at="2024-04-24T19:23:05 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-24T19:23:23 IST" duration-ms="18523" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.CheckTrackRunner@68567e20]" started-at="2024-04-25T17:31:10 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-25T17:31:28 IST" duration-ms="17696" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -145,7 +145,7 @@ at ✽.verify the error message "Login Successful" and 0(file:///C:/Users/agsat/
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.CheckTrackRunner@68567e20]" started-at="2024-04-24T19:23:23 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-24T19:23:41 IST" duration-ms="18381" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.CheckTrackRunner@68567e20]" started-at="2024-04-25T17:31:28 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-25T17:31:45 IST" duration-ms="16859" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -161,7 +161,7 @@ at ✽.verify the error message "Login Successful" and 0(file:///C:/Users/agsat/
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.CheckTrackRunner@68567e20]" started-at="2024-04-24T19:23:41 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-24T19:23:59 IST" duration-ms="17138" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.CheckTrackRunner@68567e20]" started-at="2024-04-25T17:31:45 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-25T17:32:01 IST" duration-ms="16436" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -177,7 +177,7 @@ at ✽.verify the error message "Login Successful" and 0(file:///C:/Users/agsat/
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.CheckTrackRunner@68567e20]" started-at="2024-04-24T19:23:59 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-24T19:24:17 IST" duration-ms="18729" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.CheckTrackRunner@68567e20]" started-at="2024-04-25T17:32:01 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-25T17:32:17 IST" duration-ms="15805" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -193,7 +193,7 @@ at ✽.verify the error message "Login Successful" and 0(file:///C:/Users/agsat/
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.CheckTrackRunner@68567e20]" started-at="2024-04-24T19:24:17 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-24T19:24:36 IST" duration-ms="18705" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.CheckTrackRunner@68567e20]" started-at="2024-04-25T17:32:17 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-25T17:32:35 IST" duration-ms="18472" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -209,11 +209,11 @@ at ✽.verify the error message "Login Successful" and 0(file:///C:/Users/agsat/
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:testRunner.CheckTrackRunner@68567e20]" started-at="2024-04-24T19:24:36 IST" name="tearDownClass" finished-at="2024-04-24T19:24:36 IST" duration-ms="37" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:testRunner.CheckTrackRunner@68567e20]" started-at="2024-04-25T17:32:35 IST" name="tearDownClass" finished-at="2024-04-25T17:32:35 IST" duration-ms="25" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
       </class> <!-- testRunner.CheckTrackRunner -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Regression Tests -->
+  </suite> <!-- test Suite -->
 </testng-results>
