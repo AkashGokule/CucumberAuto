@@ -8,43 +8,11 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">test Suite</th></tr>
-<tr><td><a href="#t0">Regression Tests</a></td><td class="num">8</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">187,157</td><td></td><td></td></tr>
+<tr><th colspan="8">Default suite</th></tr>
+<tr><td><a href="#t0">Default test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">106,166</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">test Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Regression Tests &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">testRunner.CheckTrackRunner</td><td><a href="#m0">runScenario</a></td><td rowspan="1">1714046369345</td><td rowspan="1">44732</td></tr><tr><th colspan="4">Regression Tests &#8212; passed</th></tr><tr class="passedeven"><td rowspan="8">testRunner.CheckTrackRunner</td><td><a href="#m1">runScenario</a></td><td rowspan="8">1714046470515</td><td rowspan="8">17696</td></tr><tr class="passedeven"><td><a href="#m2">runScenario</a></td></tr><tr class="passedeven"><td><a href="#m3">runScenario</a></td></tr><tr class="passedeven"><td><a href="#m4">runScenario</a></td></tr><tr class="passedeven"><td><a href="#m5">runScenario</a></td></tr><tr class="passedeven"><td><a href="#m6">runScenario</a></td></tr><tr class="passedeven"><td><a href="#m7">runScenario</a></td></tr><tr class="passedeven"><td><a href="#m8">runScenario</a></td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">qa.Testlayer.TimeEntryTest</td><td><a href="#m0">addTimeEntry</a></td><td rowspan="1">1714734874509</td><td rowspan="1">87576</td></tr></tbody>
 </table>
-<h2>Regression Tests</h2><h3 id="m0">testRunner.CheckTrackRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Login Page Validations&quot;</td><td>&quot;Verify the login Functionality&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: &apos;4.13.0&apos;, revision: &apos;ba948ece5b*&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8&apos;
-Driver info: io.appium.java_client.android.AndroidDriver
-Command: [47037a3d-6b75-4304-a655-56568305ab2f, findElement {using=xpath, value=//android.view.View[@content-desc=&quot;Login Successful&quot;]}]
-Capabilities {appium:app: C:\AkashWorkspace\SetupFile..., appium:appPackage: com.example.employee_app, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {app: C:\AkashWorkspace\SetupFile..., automationName: UiAutomator2, deviceName: Android12, newCommandTimeout: 60, platformName: ANDROID, platformVersion: 12, resetKeyboard: true, unicodeKeyboard: true}, appium:deviceApiLevel: 31, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_x86_64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x1920, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:newCommandTimeout: 60, appium:pixelRatio: 2.625, appium:platformVersion: 12, appium:resetKeyboard: true, appium:statBarHeight: 63, appium:takesScreenshot: true, appium:unicodeKeyboard: true, appium:viewportRect: {height: 1731, left: 0, top: 63, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Session ID: 47037a3d-6b75-4304-a655-56568305ab2f
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:250)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy44.getAttribute(Unknown Source)
-	at qa.pageLayer.LoginPage.loginSuccessFullmassage(LoginPage.java:100)
-	at stepDefination.CheckTrackLoginDef.verify_the_error_message_and(CheckTrackLoginDef.java:216)
-	at ✽.verify the error message &quot;Login Successful&quot; and 0(file:///C:/Users/agsat/git/CucumberAuto/CucumberAuto/./FeatureFile/Loginfeature.feature:10)
-... Removed 5 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">testRunner.CheckTrackRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Login Page Validations&quot;</td><td>&quot;Verify the login Functionality&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">testRunner.CheckTrackRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Login Page Validations&quot;</td><td>&quot;Verify the login Functionality&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">testRunner.CheckTrackRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Login Page Validations&quot;</td><td>&quot;Verify the login Functionality&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">testRunner.CheckTrackRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Login Page Validations&quot;</td><td>&quot;Verify the login Functionality&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">testRunner.CheckTrackRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Login Page Validations&quot;</td><td>&quot;Verify the login Functionality&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m6">testRunner.CheckTrackRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Login Page Validations&quot;</td><td>&quot;Verify the login Functionality&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m7">testRunner.CheckTrackRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Login Page Validations&quot;</td><td>&quot;Verify the login Functionality&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m8">testRunner.CheckTrackRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Login Page Validations&quot;</td><td>&quot;Verify the login Functionality&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Default test</h2><h3 id="m0">qa.Testlayer.TimeEntryTest#addTimeEntry</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

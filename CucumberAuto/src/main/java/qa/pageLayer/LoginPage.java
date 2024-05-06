@@ -9,7 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 import io.appium.java_client.android.AndroidDriver;
 
 public class LoginPage {
-                     
+	
 	@FindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.ImageView[2]")
 	private WebElement email;
                      

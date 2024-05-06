@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [test Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Regression Tests(failed)">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testRunner.CheckTrackRunner">
+      <class name="qa.Testlayer.TimeEntryTest">
         <methods>
-          <include name="setUpClass"/>
-          <include name="tearDownClass"/>
-          <include name="runScenario" invocation-numbers="0"/>
+          <include name="month"/>
+          <include name="intialize"/>
         </methods>
-      </class> <!-- testRunner.CheckTrackRunner -->
+      </class> <!-- qa.Testlayer.TimeEntryTest -->
     </classes>
-  </test> <!-- Regression Tests(failed) -->
-</suite> <!-- Failed suite [test Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

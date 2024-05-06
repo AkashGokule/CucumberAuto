@@ -1,25 +1,16 @@
 package qa.TestBase;
 
-import java.io.File;
-import java.io.IOException;
 import java.net.URL;
 import java.util.Properties;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.ContextAware;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.io.FileHandler;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeSuite;
 
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
-import io.cucumber.java.Scenario;
 import qa.My_Details.Request_My_Leaves;
 import qa.My_Details.TeamMembersProfile;
 import qa.My_Timesheet.Timesheet;
@@ -37,8 +28,6 @@ import qa.Team_Members.Edit_TeamMembers;
 import qa.Team_Members.Leaves;
 import qa.Team_Members.Role_Assignment;
 import qa.Timesheet_Approval.Timesheet_Approval;
-import qa.Utility.Scroll;
-import qa.Utility.Scroll.ScrollDiretion;
 import qa.Utility.TimePickerWeel;
 import qa.Utility.TimePickerWheelEdit;
 import qa.Work_Schedules.Add_WorkSchedule;
@@ -134,7 +123,7 @@ public class TestBase {
 
 	}
       //@BeforeSuite
-	 // @BeforeClass
+	  @BeforeClass
 	//	@BeforeMethod
 	public static  void intialize() {
 		TestBase testBase =new TestBase();

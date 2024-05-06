@@ -86,7 +86,7 @@ public TimePickerWeel (AndroidDriver driver) {
 	        	System.out.println("hour hand: " + fromHourStr);
 
 	        	
-	    		from_Hourse=driver.findElement(By.xpath("(//android.view.View[@content-desc='"+fromHourStr+"'])[1]"));
+	    		from_Hourse=driver.findElement(By.xpath("(//android.view.View[@content-desc='"+fromHourStr+"'])[1]"));	    			    		
 	    		Actions a =new Actions(driver);
 	    		a.moveToElement(from_Hourse).click().perform();
 	           
@@ -152,7 +152,7 @@ public TimePickerWeel (AndroidDriver driver) {
 	public void clickOn_to_minute(String contentdesc_tm) {
 		
 		String arr[]= getCurrentTime();
-		  int i=1;
+		  int i=0;
 	        String RightStopHour=contentdesc_tm;
 	        
 	        while(true) {
@@ -163,7 +163,8 @@ public TimePickerWeel (AndroidDriver driver) {
 	        	System.out.println("hour hand: " + fromminStr);
 
 	        	
-	    		from_Hourse=driver.findElement(By.xpath("(//android.view.View[@content-desc='"+fromminStr+"'])[2]"));
+	    		//from_Hourse=driver.findElement(By.xpath("(//android.view.View[@content-desc='"+fromminStr+"'])[2]"));
+	    		from_Hourse=driver.findElement(By.xpath("//android.view.View[@content-desc='"+fromminStr+"']"));
 	    		Actions a =new Actions(driver);
 	    		a.moveToElement(from_Hourse).click().perform();
 	           
@@ -203,9 +204,9 @@ public TimePickerWeel (AndroidDriver driver) {
 //	    String hours = formattedDate.substring(0, 2);
 //	    String minutes = formattedDate.substring(2, 4);
 //	    
-////	    System.out.println(formattedDate);
-////	    System.out.println(hours);
-////	    System.out.println(minutes);
+//	    System.out.println(formattedDate);
+//	    System.out.println(hours);
+//	    System.out.println(minutes);
 	    
 		 String currentTime = driver.getDeviceTime();
 	        System.out.println("Current device time: " + currentTime);
@@ -219,5 +220,7 @@ public TimePickerWeel (AndroidDriver driver) {
 	    System.out.println(Arrays.toString(result));
 	    return result;
 	}
+	/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	
 
 }
