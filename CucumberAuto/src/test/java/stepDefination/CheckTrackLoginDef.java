@@ -27,50 +27,8 @@ import qa.pageLayer.LoginPage;
 
 
 public class CheckTrackLoginDef extends TestBase{
-	
-	//public static AndroidDriver driver;
-//	public String appiumServer="127.0.0.1";
-//	public int appiumPort=4723;
-//	URL appiumURl=null;
-	//public LoginPage login;
+
 	 Logger logger;
-	
-//	public AndroidDriver initializerDriver() {
-	 
-//
-//		DesiredCapabilities cap= new DesiredCapabilities();
-//		cap.setCapability(MobileCapabilityType.DEVICE_NAME,"Android12");
-////		cap.setCapability(MobileCapabilityType.APP,"C:\\Users\\agsat\\OneDrive\\Desktop\\employee-app\\build\\app\\outputs\\flutter-apk\\app-release.apk");
-//		cap.setCapability(MobileCapabilityType.APP,"C:\\AkashWorkspace\\SetupFiles\\Project App\\app-release (1).apk");//pikar click
-//		cap.setCapability("platformVersion", "12");
-////		cap.setCapability("udid", "93JAY0BLTW");//for pixel 3a
-////		cap.setCapability("udid", "8AMX0VP5S");//for pixel 3
-////		cap.setCapability("udid", "emulator-5554");//for pixel 3
-//		cap.setCapability("automationName","UiAutomator2");
-//		cap.setCapability("unicodeKeyboard", "true");
-//		
-//		cap.setCapability("resetKeyboard", "true");
-//		cap.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT,60);
-//		
-//		//			WebDriverWait wait = new WebDriverWait(driver,30);
-//		//			cap.setCapability("appPackage","com.greycell.dashcamuserapp");
-//		//			cap.setCapability("appActivity","com.greycell.dashcamuserapp.MainActivity");
-//		//			
-//		try {
-//			appiumURl=new URL("http://"+appiumServer+":"+appiumPort+"/wd/hub");
-//			this.driver=new AndroidDriver(appiumURl,cap);
-//			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-//		}
-//
-//		catch(Exception e) {
-//			e.printStackTrace();
-//		}
-//
-//		return driver;
-//	
-//	}
-
-
     @After
     public void tearDown(Scenario scenario) throws IOException {
         System.out.println("Scenario status ======>"+scenario.getStatus());

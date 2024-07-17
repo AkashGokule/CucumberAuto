@@ -10,8 +10,8 @@ public class LoginPageTest extends TestBase{
 	@Test(priority = 1)
 	public void loginPageTest_WithvalidCredential() {
 
-		login.enter_email("akashgokule12345@mailinator.com");
-		login.enter_password("akashgokule12345@mailinator.com");
+		login.enter_email("parthpatel@yopmail.com");
+		login.enter_password("parthpatel@yopmail.com");
 		login.click_on_login_btn();
 
 		

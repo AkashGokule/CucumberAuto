@@ -129,7 +129,8 @@ public TimePickerWeel (AndroidDriver driver) {
 	        	
 	        	System.out.println("hour hand: " + fromHourStr);
 
-	        	to_Hourse=driver.findElement(By.xpath("(//android.view.View[@content-desc='"+fromHourStr+"'])[2]"));
+	        	//to_Hourse=driver.findElement(By.xpath("(//android.view.View[@content-desc='"+fromHourStr+"'])[2]"));
+	        	to_Hourse=driver.findElement(By.xpath("//android.view.View[@content-desc='"+fromHourStr+"']"));
 	    		Actions a =new Actions(driver);
 	    		a.moveToElement(to_Hourse).click().perform();
 	           

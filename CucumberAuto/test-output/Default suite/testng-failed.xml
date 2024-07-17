@@ -5,7 +5,7 @@
     <classes>
       <class name="qa.Testlayer.TimeEntryTest">
         <methods>
-          <include name="month"/>
+          <include name="justForLogic"/>
           <include name="intialize"/>
         </methods>
       </class> <!-- qa.Testlayer.TimeEntryTest -->

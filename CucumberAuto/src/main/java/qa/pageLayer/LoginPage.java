@@ -7,13 +7,14 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import io.appium.java_client.android.AndroidDriver;
+import qa.TestBase.TestBase;
 
-public class LoginPage {
+public class LoginPage extends TestBase{
 	
-	@FindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.ImageView[2]")
+	@FindBy(xpath = "//android.widget.ScrollView/android.widget.ImageView[2]")
 	private WebElement email;
                      
-	@FindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText")
+	@FindBy(xpath = "//android.widget.EditText")
 	private WebElement passWord;
 
 	@FindBy(xpath = "//android.widget.Button[@content-desc=\"LOGIN\"]")
@@ -36,14 +37,14 @@ public class LoginPage {
 	private WebElement badcredentials;
 	
 	
-	AndroidDriver driver;
+	
 
 
-	public LoginPage( AndroidDriver driver)
+	public LoginPage( )
 	{
 		PageFactory.initElements(driver, this);
 
-		this.driver = driver;
+	
 
 	}
 

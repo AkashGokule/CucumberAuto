@@ -8,7 +8,9 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.ContextAware;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 
+import demo.Demo_timeEntry;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
 import qa.My_Details.Request_My_Leaves;
@@ -28,6 +30,7 @@ import qa.Team_Members.Edit_TeamMembers;
 import qa.Team_Members.Leaves;
 import qa.Team_Members.Role_Assignment;
 import qa.Timesheet_Approval.Timesheet_Approval;
+import qa.Utility.Sendkey_timeEntry;
 import qa.Utility.TimePickerWeel;
 import qa.Utility.TimePickerWheelEdit;
 import qa.Work_Schedules.Add_WorkSchedule;
@@ -72,7 +75,8 @@ public class TestBase {
 	public static Edit_Leave_types edit_leave_types;
 	public static Modify_leaveBalance modify_leavebalance;
     public static TeamMembersProfile teammembersprofile;
-
+    public static Sendkey_timeEntry sendkey_timeEntry;
+    
 	public TestBase() {
 		//		try {
 		//			prop=new Properties();
@@ -100,10 +104,10 @@ public class TestBase {
 
 	public DesiredCapabilities setAppCapabilitiesAndroid() {
 		DesiredCapabilities cap= new DesiredCapabilities();
-		cap.setCapability(MobileCapabilityType.DEVICE_NAME,"Android12");
+		cap.setCapability(MobileCapabilityType.DEVICE_NAME,"Android11");
 //		cap.setCapability(MobileCapabilityType.APP,"C:\\Users\\agsat\\OneDrive\\Desktop\\employee-app\\build\\app\\outputs\\flutter-apk\\app-release.apk");
 //		cap.setCapability(MobileCapabilityType.APP,"C:\\AkashWorkspace\\SetupFiles\\Project App\\app-release (1).apk");//pikar click
-		cap.setCapability(MobileCapabilityType.APP,"C:\\AkashWorkspace\\SetupFiles\\Project App\\app-release (2).apk");
+		cap.setCapability(MobileCapabilityType.APP,"C:\\AkashWorkspace\\SetupFiles\\Project App\\app-release.apk");
 		cap.setCapability("platformVersion", "12");
 		cap.setCapability("automationName", "Flutter");
 		cap.setCapability("newCommandTimeout", 250);
@@ -123,14 +127,14 @@ public class TestBase {
 
 	}
       //@BeforeSuite
-	  @BeforeClass
-	//	@BeforeMethod
+	 // @BeforeClass
+	//@BeforeMethod
 	public static  void intialize() {
 		TestBase testBase =new TestBase();
 		driver= testBase.initializerDriver();
 
-		login=new LoginPage(driver);
-		dbpage=new DashBoardPage(driver);
+		login=new LoginPage();
+		dbpage=new DashBoardPage();
 		add_teammembers  =new Add_TeamMembers(driver);
 		associated_workschedule=new Associated_WorkSchedule(driver);
 		role_assignment =new Role_Assignment(driver);
@@ -155,6 +159,7 @@ public class TestBase {
 		modify_leavebalance =new Modify_leaveBalance(driver);
 		timepickerwheeledit =new TimePickerWheelEdit(driver);
 		teammembersprofile =new TeamMembersProfile(driver);
+	    sendkey_timeEntry= new Sendkey_timeEntry ();
 	}
 	 
 	

@@ -11,16 +11,16 @@ Feature: Verify the login Functionality
     
 
    Examples:      
-|inputedata                           |   username  	                            | password   | loginoutcome                |errormessage 									            | index |
-|valid credential                     |  akashgokule12345@yopmail.com 	        	|123456      |     Login success           |Login Successful       		                |0      |
-|invalid credential                   |  gokuleakash12@mailinator.com	            |12345 		   |     Login failure           |Bad credentials!                          |1      |
-|invalid username                     |  gokuleakash12@mailinator.com	            |123456 		 |     Login failure           |Bad credentials!                          |2      |
-|invalid password                     |  akashgokule12345@yopmail.com		          |abc13       |     Login failure           |Bad credentials!                          |3      |
-|blanck password                      |  akashgokule12345@yopmail.com 	          |            |     Login failure           |Password cannot be blank                  |4      |        
-|blanck username                      |                                           |123456      |     Login failure           |Please enter a valid email Address        |5      |     
-|blank credential                     |                                           |            |     Login failure           |Please enter a valid email Address        |6      |
-|blank_username invalid_password      |                                           | 123445     |     Login failure           |Please enter a valid email Address        |7      |
-|invalid_username blank_password      | akashgokule12@mailinator.com              |            |     Login failure           |Password cannot be blank                  |8      |
+|inputedata                           |   username  	                            | password                   | loginoutcome                |errormessage 									            | index |
+|valid credential                     |  parthpatel@yopmail.com 	        	      |parthpatel@yopmail.com      |     Login success           |Login Successful       		                |0      |
+|invalid credential                   |  gokuleakash12@mailinator.com	            |12345 		                   |     Login failure           |Bad credentials!                          |1      |
+|invalid username                     |  gokuleakash12@mailinator.com	            |parthpatel@yopmail.com 		 |     Login failure           |Bad credentials!                          |2      |
+|invalid password                     |  parthpatel@yopmail.com		                |abc13                       |     Login failure           |Bad credentials!                          |3      |
+|blanck password                      |  parthpatel@yopmail.com 	                |                            |     Login failure           |Password cannot be blank                  |4      |        
+|blanck username                      |                                           |parthpatel@yopmail.com      |     Login failure           |Please enter a valid email Address        |5      |     
+|blank credential                     |                                           |                            |     Login failure           |Please enter a valid email Address        |6      |
+|blank_username invalid_password      |                                           | 123445                     |     Login failure           |Please enter a valid email Address        |7      |
+|invalid_username blank_password      | akashgokule12@mailinator.com              |                            |     Login failure           |Password cannot be blank                  |8      |
 
 
 

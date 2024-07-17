@@ -5,8 +5,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import io.appium.java_client.android.AndroidDriver;
+import qa.TestBase.TestBase;
 
-public class DashBoardPage {
+public class DashBoardPage extends TestBase{
 	
 	@FindBy(xpath = "//android.widget.ImageView[@content-desc=\"Team members\"]")
 	private WebElement Team_members;
@@ -41,14 +42,14 @@ public class DashBoardPage {
 	@FindBy(xpath = "//android.widget.ImageView[@content-desc=\"Log Out\"]")
 	private WebElement LogOut;
 	
-	AndroidDriver driver;
 	
 	
-	public DashBoardPage( AndroidDriver driver)
+	
+	public DashBoardPage( )
 	{
 		PageFactory.initElements(driver, this);
 		
-		this.driver = driver;
+		
 	}
 	
 	public void ClickOn_MainMenu() {
